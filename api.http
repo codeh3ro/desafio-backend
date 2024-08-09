@@ -1,0 +1,54 @@
+### Realiza autenticação e envia token para usuario autenticado com sucesso
+
+POST http://localhost:3333/api/auth/login
+Content-Type: application/json
+
+{
+    "password": "12345",
+    "email": "teste@email.com" 
+}
+
+
+### Insere um carro
+
+POST http://localhost:3333/api/cars
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjNhMjQ4NTY5LTY2YzMtNGQzZS1iNmZiLTAyMTNiNGEyZTJhMyIsImVtYWlsIjoidGVzdGVAZW1haWwuY29tIiwiaWF0IjoxNzIzMDg4Njg1LCJleHAiOjE3MjMxNzUwODV9.GaxOcjgA0ZDfxIb0ctmUuXxP-Naxg2ZxJiihdsbHOsY
+
+{
+    "model": "Fusca",
+    "brand": "Volkswagen",
+    "imageUrl": "https://i.pinimg.com/originals/86/52/72/865272196ce2374b43d0b810598ac895.jpg",
+    "color": "Preto",
+    "price": 10.000
+}
+
+### Lista todos os carros
+
+GET http://localhost:3333/api/cars
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjNhMjQ4NTY5LTY2YzMtNGQzZS1iNmZiLTAyMTNiNGEyZTJhMyIsImVtYWlsIjoidGVzdGVAZW1haWwuY29tIiwiaWF0IjoxNzIzMDg4Njg1LCJleHAiOjE3MjMxNzUwODV9.GaxOcjgA0ZDfxIb0ctmUuXxP-Naxg2ZxJiihdsbHOsY
+
+
+### Lista um carro por parametro id
+
+GET http://localhost:3333/api/cars/2
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjNhMjQ4NTY5LTY2YzMtNGQzZS1iNmZiLTAyMTNiNGEyZTJhMyIsImVtYWlsIjoidGVzdGVAZW1haWwuY29tIiwiaWF0IjoxNzIzMDg4Njg1LCJleHAiOjE3MjMxNzUwODV9.GaxOcjgA0ZDfxIb0ctmUuXxP-Naxg2ZxJiihdsbHOsY
+
+### Atualiza cadastro de um carro por parametro id
+
+PUT http://localhost:3333/api/cars/2
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjNhMjQ4NTY5LTY2YzMtNGQzZS1iNmZiLTAyMTNiNGEyZTJhMyIsImVtYWlsIjoidGVzdGVAZW1haWwuY29tIiwiaWF0IjoxNzIzMDg4Njg1LCJleHAiOjE3MjMxNzUwODV9.GaxOcjgA0ZDfxIb0ctmUuXxP-Naxg2ZxJiihdsbHOsY
+
+{
+    "model": "Fuscao",
+    "brand": "Volkswagen",
+    "imageUrl": "",
+    "color": "Preto",
+    "price": 10.000
+}
+
+### Deleta um carro
+
+DELETE http://localhost:3333/api/cars/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjNhMjQ4NTY5LTY2YzMtNGQzZS1iNmZiLTAyMTNiNGEyZTJhMyIsImVtYWlsIjoidGVzdGVAZW1haWwuY29tIiwiaWF0IjoxNzIzMDg4Njg1LCJleHAiOjE3MjMxNzUwODV9.GaxOcjgA0ZDfxIb0ctmUuXxP-Naxg2ZxJiihdsbHOsY
