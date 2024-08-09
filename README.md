@@ -10,7 +10,7 @@
 
 Pelo terminal, clone este repositório com o comando:
 
-- `git clone [https://git@github.com/codeh3ro/desafio-backend.git](https://github.com/codeh3ro/desafio-backend.git)`
+- `git clone https://git@github.com/codeh3ro/desafio-backend.git`
 
 Entre no diretório `desafio-backend`:
 
